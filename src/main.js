@@ -8,6 +8,10 @@ import '../node_modules/font-awesome/css/font-awesome.css';
 //import '../styles/styles.css';
 import'../sass/styles.scss'
 
+import "../node_modules/foundation-sites/dist/foundation.css";
+import "../styles/foundation.css"
+import foundation from 'foundation-sites'
+
 bootstrap(function(aurelia) {
   aurelia.use
     .standardConfiguration()
@@ -19,5 +23,7 @@ bootstrap(function(aurelia) {
       // Initialize any frameworks you want to use
       // var name = 'dan';
       //$(document.body).html(name);
+        $(document).foundation();
+      console.log('foundation lloaded')
     });
 });
