@@ -1,0 +1,23 @@
+.page-host {
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
+
+.content {
+
+  padding: 20px;
+  background: white;
+  line-height: 1.6;
+}
