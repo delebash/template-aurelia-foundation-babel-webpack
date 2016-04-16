@@ -44,14 +44,14 @@ module.exports = {
     },
     loaders: [
 
-      //Use <link rel="stylesheet" href="styles.css"> in index.html when extracting css
-      // Extract CSS during build
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-      },
+      // //Use <link rel="stylesheet" href="styles.css"> in index.html when extracting css
+      // // Extract CSS during build
+      // {
+      //   test: /\.css$/,
+      //   loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      // },
       //You still need css for files that are not .scss but jus .css
-      //{ test: /\.css?$/, loader: 'style!css' },
+      { test: /\.css?$/, loader: 'style!css' },
       {
         loader: "babel-loader",
         // Skip any files outside of your project's `src` directory
@@ -78,8 +78,8 @@ module.exports = {
     autoprefixer({
       browsers: ['last 2 versions']
     })
-  ],
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, "./sass")]
-  }
+  ]
+  // sassLoader: {
+  //   includePaths: [path.resolve(__dirname, "sass")]
+  // }
 };

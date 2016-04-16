@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/font-awesome/css/font-awesome.css';
-import '../styles/styles.css';
+//import '../styles/styles.css';
 import'../sass/styles.scss'
 
 bootstrap(function(aurelia) {
