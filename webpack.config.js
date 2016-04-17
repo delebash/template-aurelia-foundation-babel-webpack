@@ -29,9 +29,9 @@ module.exports = {
       allChunks: true
     }),
     new AureliaWebpackPlugin(),
-    new ProvidePlugin({
-      Promise: 'bluebird'
-    })
+    // new ProvidePlugin({
+    //   Promise: 'bluebird'
+    // })
   ],
   devtool: 'source-map',
   devServer: {

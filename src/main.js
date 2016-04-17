@@ -1,7 +1,8 @@
-var Promise = require('bluebird'); // Promise polyfill for IE11
 import {Aurelia} from 'aurelia-framework';
-import {bootstrap} from 'aurelia-bootstrapper-webpack';
+
+import {bootstrap as webpackbootstrap} from 'aurelia-bootstrapper-webpack';
 import $ from 'jquery'
+import bootstrap from 'bootstrap'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import '../node_modules/font-awesome/css/font-awesome.css';
@@ -10,9 +11,9 @@ import'../sass/styles.scss'
 
 import "../node_modules/foundation-sites/dist/foundation.css";
 import "../styles/foundation.css"
-import foundation from 'foundation-sites'
+//import foundation from 'foundation-sites'
 
-bootstrap(function(aurelia) {
+webpackbootstrap(function(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging();
@@ -23,7 +24,8 @@ bootstrap(function(aurelia) {
       // Initialize any frameworks you want to use
       // var name = 'dan';
       //$(document.body).html(name);
-        $(document).foundation();
+       // $(document).foundation();
+      
       console.log('foundation lloaded')
     });
 });
