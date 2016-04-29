@@ -16,7 +16,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js']
   },
   // Adding jquery here makes it global for the app, no import needed
   plugins: [
@@ -33,8 +33,8 @@ module.exports = {
     //   Promise: 'bluebird'
     // })
   ],
-  // in order for sourcemap to work when using webpack-dev-server the devtool has to match what is in script, so
-  //prod uses source-map so devtool = sourcemap for dev it is inline so devtool = inline-source-map
+  // for dev server make sure in package.json dev script that --devtool source-map not eval production version has
+  //correct setting for source-map
   devtool: 'source-map',
   devServer: {
     host: 'localhost',
@@ -68,7 +68,6 @@ module.exports = {
         }
       },
       { test: /\.html$/, loader: 'html' },
-     // { test: /\.js$/, loader: 'babel', exclude: /node_modules/, query: { presets: ['es2015-loose', 'stage-1'], plugins: ['transform-decorators-legacy'] } },
       { test: /\.(png|gif|jpg)$/, loader: 'url', query: { limit: 8192 } },
       { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url', query: { limit: 10000, mimetype: 'application/font-woff2' } },
       { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url', query: { limit: 10000, mimetype: 'application/font-woff' } },
