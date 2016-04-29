@@ -33,6 +33,8 @@ module.exports = {
     //   Promise: 'bluebird'
     // })
   ],
+  // in order for sourcemap to work when using webpack-dev-server the devtool has to match what is in script, so
+  //prod uses source-map so devtool = sourcemap for dev it is inline so devtool = inline-source-map
   devtool: 'source-map',
   devServer: {
     host: 'localhost',
